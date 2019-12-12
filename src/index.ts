@@ -2,6 +2,8 @@ import express, { Request, Response } from "express";
 import bodyParser from "body-parser";
 import cookieSession from "cookie-session";
 import { router } from "./routes/loginRoutes";
+import "./controllers/LoginControllers";
+import { AppRouter } from "./AppRouter";
 
 const app = express();
 
@@ -23,6 +25,7 @@ app.get("/", (req: Request, res: Response) => {
 `);
   }
 });
-app.use("/", router);
+app.use(router);
+app.use(AppRouter.getInstance());
 
 app.listen(3000, () => console.log("server is listening on port 3000"));
