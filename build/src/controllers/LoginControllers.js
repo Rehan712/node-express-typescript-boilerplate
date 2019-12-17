@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var decorators_1 = require("../decorators");
+var decorators_1 = require("../../decorators");
 function logger(req, res, next) {
     console.log("Request was made!!");
     next();
